@@ -5,13 +5,13 @@ const handler = async (m, {conn, usedPrefix, command}) => {
   let q = m.quoted ? m.quoted : m;
   let mime = (q.msg || q).mimetype || q.mediaType || "";
   if (!mime) throw `*『✦』Responda a una imagen para aplicar el efecto HD/remini*`;
-  if (!/image\/(jpe?g|png)/.test(mime)) throw `『⚠️』 El formato del archivo (${mime}) no es compatible, envía o responda a una imagen`;
-  m.reply("『♻️』Aumentando calidad de la imagen...");
+  if (!/image\/(jpe?g|png)/.test(mime)) throw `*『✦』el formato:* ${mime} *no es compatible.*\n\n*Responda a una imagen.*`;
+  m.reply("*『♻️』Aumentando calidad de la imagen...*");
   let img = await q.download?.();
   let pr = await remini(img, "enhance");
   conn.sendMessage(m.chat, {image: pr}, {quoted: m});
  } catch {
-  throw "『❌』Ocurrio un error inesperado, intentalo de nuevo.";
+  throw "*『❌』Ocurrio un error inesperado, intentalo de nuevo.*";
  }
 };
 handler.help = ["remini", "hd", "enhance"];
