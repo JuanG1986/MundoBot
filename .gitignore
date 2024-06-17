@@ -1,1 +1,15 @@
-secret.md
+#| Folders |#
+
+.github
+node_modules
+NaufraBotSession
+tmp
+BotsWhatsAppOFC
+pluginpilot
+plugins/supersecretlistener.js
+datasecret
+
+#| Files |#
+
+package-lock.json
+database.json
