@@ -7,7 +7,7 @@ if (process.send) { process.send('uptime')
 _muptime = await new Promise(resolve => { process.once('message', resolve) 
 setTimeout(resolve, 1000) }) * 1000}
 let uptime = clockString(_uptime)
-let estado = `Bienvenido a 𝙉𝙖𝙪𝙛𝙧𝙖𝙕𝙖𝙥𝙥-𝙈𝘿:`
+let estado = `Bienvenido a MundoBot𝙈𝘿:`
 await conn.sendButton(m.chat, estado, `Selecciona los siguientes botones 🛎️ y no te olvides de verificarte.`, pp, [
 ['𝙈𝙀𝙉𝙐 𝘾𝙊𝙈𝙋𝙇𝙀𝙏𝙊 💥', '.menucompleto'],
 ['𝘼𝙐𝙏𝙊 𝙑𝙀𝙍𝙄𝙁𝙄𝘾𝘼𝙍 ✅', '#reg nauSub.20'],
